@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
+
+.border-box {
+  border-style: ridge;
+  padding-bottom: 55%;
+
+}
+.reciverbox {
+  background-color: paleturquoise;
+  padding: 5px 10px;
+  margin: 5px;
+  margin-right: 300px;
+  display: table;
+  border-style: ridge;
+}
+
+.senderbox {
+  background-color: mistyrose;
+  padding: 5px 10px;
+  margin: 5px;
+  display: table;
+  margin-left: auto;
+  border-style: ridge;
+}
+.card-footer {
+  background-color: rgb(82, 155, 155);
+}
+.text-msg {
+  background-color: rgb(82, 155, 155);
+}
+.button-box {
+  color: #ffffff;
+  background-color: rgb(82, 155, 155);
+}

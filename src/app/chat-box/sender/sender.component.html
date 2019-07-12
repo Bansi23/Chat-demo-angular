@@ -1,0 +1,19 @@
+<!-- <label><b>Sender</b></label> -->
+<form [formGroup]="SendMsg">
+  <div class="row">
+    <div class="col lg-11">
+      <input class="form-control text-msg" *ngIf="edit" formControlName="msg" type="text" placeholder="type here..."
+        (keyup.enter)="sendMsg()" aria-invalid="false">
+
+      <input class="form-control text-msg" *ngIf="!edit" formControlName="msg" type="text" placeholder="type here..."
+        (keyup.enter)="editRec(chatBox)" aria-invalid="false">
+    </div>
+
+    <div>
+      <button type="button" *ngIf="edit" class="btn button-box col lg-1" (click)=sendMsg()><i
+          class="fa fa-paper-plane"></i></button>
+      <button type="button" *ngIf="!edit" class="btn button-box col lg-1" (click)="editRec(chatBox)"><i
+          class="fa fa-paper-plane"></i></button>
+    </div>
+  </div>
+</form>

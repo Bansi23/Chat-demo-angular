@@ -1,0 +1,10 @@
+<label><b>Reciver</b></label>
+<form [formGroup]="ReciveMsg">
+  <div class="row">
+    <div class="col lg-5">
+      <textarea rows="1" placeholder="type here..." cols="50" class="form-control " formControlName="msg"></textarea>
+    </div>
+    <div class="col lg-1"><button type="button" class="btn btn-success" (click)=reciveMsg()><i
+          class="fa fa-paper-plane"></i></button></div>
+  </div>
+</form>

@@ -1,0 +1,43 @@
+<div class="mx-5 my-5">
+  <h5 class="text-center">Chat Box</h5><br>
+  <div class="row">
+    <div class=" col col-lg-6 col-md-6 offset-md-3">
+      <div class="card">
+        <div class="card-header">Chat</div>
+        <div class="card-body">
+          <div class="border-box">
+            <div *ngFor="let _msg of chatBox">
+              <div [ngClass]="{'senderbox': _msg.name == 'Sender' , 'reciverbox': _msg.name == 'Delever'}">
+                <div>{{_msg.name}} </div>
+                <span>
+                  {{_msg.msg}}
+                  <div class="btn-group" *ngIf="!_msg.isdeleted">
+                    <div class="btn-group" ngbDropdown role="group">
+                      <button class="btn btn-sm" ngbDropdownToggle> <i class="fa fa-ellipsis-v"></i> </button>
+                      <div class="dropdown-menu" ngbDropdownMenu>
+                        <button ngbDropdownItem (click)="editRecord(_msg)">Edit</button>
+                        <button ngbDropdownItem (click)="deleteRecord(_msg)">Delete</button>
+                      </div>
+                    </div>
+                  </div>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div><!-- Card-body -->
+        <div class="card-footer">
+          <app-sender (SenderData)="sendMsg($event)" [chatBox]="chatBox"></app-sender>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- <app-sender (SenderData)="sendMsg($event)"></app-sender> -->
+
+
+  <!-- <div class="col-lg-6">
+      <app-reciver (ReciverData)="reciveMsg($event) "></app-reciver>
+    </div> -->
+
+</div>
